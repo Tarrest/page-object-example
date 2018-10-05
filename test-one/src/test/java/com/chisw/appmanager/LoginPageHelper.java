@@ -5,10 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.chisw.data.Constants.BASE_PASS;
-import static com.chisw.data.Constants.BASE_USER;
-
 public class LoginPageHelper extends BaseHelper {
+
     @FindBy(name = "username")
     private WebElement usernameField;
 

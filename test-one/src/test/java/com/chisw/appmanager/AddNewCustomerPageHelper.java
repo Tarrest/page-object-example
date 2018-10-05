@@ -1,5 +1,6 @@
 package com.chisw.appmanager;
 
+import com.chisw.data.CustomersData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,13 +25,14 @@ public class AddNewCustomerPageHelper extends BaseHelper {
         PageFactory.initElements(driver, this);
     }
 
-    public void fillAndSendCustomerForm(){
-        type(firstnameInput, "John");
-        type(lastnameInput, "Rembo");
-        type(companyInput, "War inc.");
-        click(saveCustomer);
+    public void fillAndSendCustomerForm(CustomersData customersData){
+        type(firstnameInput, customersData.getFirstName());
+        type(lastnameInput, customersData.getSecondName());
+        type(companyInput, customersData.getCompany());
     }
 
-
+    public void submitCustomer() {
+        click(saveCustomer);
+    }
 
 }

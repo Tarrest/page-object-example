@@ -1,5 +1,6 @@
 package com.chisw.appmanager;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,4 +21,7 @@ public class CustomersPageHelper extends BaseHelper {
     }
 
 
+    public int getCustomersCount() {
+        return driver.findElements(By.xpath("//tr[@class='row']")).size();
+    }
 }

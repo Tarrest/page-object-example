@@ -1,12 +1,13 @@
 package com.chisw.appmanager;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static com.chisw.data.Constants.BASE_URL;
-
 public class BaseHelper {
+
+    public static final String BASE_URL = "http://localhost/litecart/admin";
+    public static final String BASE_USER = "admin";
+    public static final String BASE_PASS = "admin";
 
     WebDriver driver;
 
